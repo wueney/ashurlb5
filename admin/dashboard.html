@@ -202,18 +202,36 @@
     </footer>
 
     <script src="../js/language.js"></script>
-    <script>
-        // Выход из системы
-        document.getElementById('logout').addEventListener('click', function(e) {
-            e.preventDefault();
-            localStorage.removeItem('adminLoggedIn');
-            window.location.href = '../index.html';
-        });
-        
-        // Проверка авторизации администратора
-        if (!localStorage.getItem('adminLoggedIn')) {
-            window.location.href = '../login.html';
-        }
-    </script>
+   <script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Перевірка авторизації
+  if (!localStorage.getItem('adminLoggedIn')) {
+    alert('Будь ласка, увійдіть через адміністративну панель');
+    window.location.href = '../login.html';
+    return;
+  }
+
+  // Обробник виходу
+  document.getElementById('logout').addEventListener('click', function(e) {
+    e.preventDefault();
+    localStorage.removeItem('adminLoggedIn');
+    window.location.href = '../index.html';
+  });
+
+  // Ініціалізація мови
+  const languageSelector = document.getElementById('language-selector');
+  if (languageSelector) {
+    languageSelector.addEventListener('change', function() {
+      const selectedLanguage = this.value;
+      localStorage.setItem('language', selectedLanguage);
+      toggleLanguage(selectedLanguage);
+    });
+  }
+});
+
+function toggleLanguage(language) {
+  // Ваша існуюча функція переключення мови
+}
+</script>
 </body>
 </html>
