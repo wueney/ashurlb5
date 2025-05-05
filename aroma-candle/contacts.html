@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoodVibes - Контакти</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .contact-section {
+            padding: 80px 0;
+        }
+        
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+        
+        .contact-info {
+            background-color: var(--card-bg);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .contact-info h3 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+        
+        .contact-icon {
+            font-size: 20px;
+            color: var(--primary-color);
+            margin-right: 15px;
+            margin-top: 5px;
+        }
+        
+        .contact-text h4 {
+            margin-bottom: 5px;
+            font-size: 18px;
+        }
+        
+        .contact-form {
+            background-color: var(--card-bg);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        
+        .form-group textarea {
+            height: 150px;
+            resize: vertical;
+        }
+        
+        .submit-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .submit-btn:hover {
+            background-color: var(--secondary-color);
+        }
+        
+        .map-container {
+            height: 400px;
+            margin-top: 40px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Good<span>Vibes</span></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Головна</a></li>
+                    <li><a href="products.html">Свічки</a></li>
+                    <li><a href="contacts.html" class="active">Контакти</a></li>
+                    <li><a href="cart.html"><i class="fas fa-shopping-cart"></i> <span id="cart-count">0</span></a></li>
+                    <li><a href="login.html"><i class="fas fa-user"></i></a></li>
+                    <li>
+                        <select id="language-selector">
+                            <option value="uk">Українська</option>
+                            <option value="en">English</option>
+                        </select>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="contact-section">
+        <div class="container">
+            <h2 class="lang-uk">Наші контакти</h2>
+            <h2 class="lang-en" style="display:none;">Our Contacts</h2>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3 class="lang-uk">Зв'яжіться з нами</h3>
+                    <h3 class="lang-en" style="display:none;">Contact Us</h3>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4 class="lang-uk">Адреса</h4>
+                            <h4 class="lang-en" style="display:none;">Address</h4>
+                            <p class="lang-uk">м. Київ, вул. Хрещатик, 1</p>
+                            <p class="lang-en" style="display:none;">Kyiv, Khreshchatyk St, 1</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4 class="lang-uk">Телефон</h4>
+                            <h4 class="lang-en" style="display:none;">Phone</h4>
+                            <p>+380662818670</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4 class="lang-uk">Email</h4>
+                            <h4 class="lang-en" style="display:none;">Email</h4>
+                            <p>info@goodvibes.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4 class="lang-uk">Графік роботи</h4>
+                            <h4 class="lang-en" style="display:none;">Working Hours</h4>
+                            <p class="lang-uk">Пн-Пт: 9:00 - 18:00<br>Сб-Нд: 10:00 - 16:00</p>
+                            <p class="lang-en" style="display:none;">Mon-Fri: 9:00 - 18:00<br>Sat-Sun: 10:00 - 16:00</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3 class="lang-uk">Напишіть нам</h3>
+                    <h3 class="lang-en" style="display:none;">Write to Us</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name" class="lang-uk">Ваше ім'я</label>
+                            <label for="name" class="lang-en" style="display:none;">Your Name</label>
+                            <input type="text" id="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="lang-uk">Email</label>
+                            <label for="email" class="lang-en" style="display:none;">Email</label>
+                            <input type="email" id="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject" class="lang-uk">Тема</label>
+                            <label for="subject" class="lang-en" style="display:none;">Subject</label>
+                            <input type="text" id="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" class="lang-uk">Повідомлення</label>
+                            <label for="message" class="lang-en" style="display:none;">Message</label>
+                            <textarea id="message" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn lang-uk">Надіслати</button>
+                        <button type="submit" class="submit-btn lang-en" style="display:none;">Send</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.715435090987!2d30.52341531573105!3d50.44777997947498!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce50ffa1a8d5%3A0x5b9f3b9a3d6e3b1a!2z0KXQvNC10LvRjNC90LjRhtC10L3QutC-0Lkg0L_RgNC-0YTQtdGB0YHQuNC-0L3QsNGPINC-0LHQu9Cw0YHRgtGMLCAxLCDQmtC40ZfQsiwgMDIwMDA!5e0!3m2!1sru!2sua!4v1620000000000!5m2!1sru!2sua" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p class="lang-uk">&copy; 2025 GoodVibes. Всі права захищені.</p>
+            <p class="lang-en" style="display:none;">&copy; 2025 GoodVibes. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/language.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        // Обработка формы контактов
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+            
+            // Здесь должна быть отправка формы на сервер
+            // В демо-версии просто показываем сообщение
+            alert(document.querySelector('.lang-uk').style.display !== 'none' ? 
+                 'Дякуємо за ваше повідомлення! Ми зв\'яжемося з вами найближчим часом.' : 
+                 'Thank you for your message! We will contact you soon.');
+            
+            // Очищаем форму
+            this.reset();
+        });
+    </script>
+</body>
+</html>
