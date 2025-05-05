@@ -228,5 +228,27 @@
             window.location.href = 'index.html';
         });
     </script>
+    <script>
+// Додаємо обробник кнопки адміністратора
+document.addEventListener('DOMContentLoaded', function() {
+  const adminLink = document.querySelector('.admin-link');
+  
+  if (adminLink) {
+    adminLink.addEventListener('click', function(e) {
+      e.preventDefault();
+      
+      // Запитуємо пароль (тимчасове рішення)
+      const password = prompt('Введіть пароль адміністратора:');
+      
+      if (password === 'admin123') { // Тимчасовий пароль
+        localStorage.setItem('adminLoggedIn', 'true');
+        window.location.href = 'admin/dashboard.html';
+      } else {
+        alert('Невірний пароль!');
+      }
+    });
+  }
+});
+</script>
 </body>
 </html>
